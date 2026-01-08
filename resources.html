@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Resource Directory | Baytown Community Hub</title>
+
+		<!-- Main stylesheet -->
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+
+		<!-- Navigation bar (same on all pages) -->
+		<nav class="navbar">
+			<div class="nav-container">
+
+				<a href="index.html" class="logo">
+					Baytown Hub
+				</a>
+
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="resources.html" class="active">Resources</a></li>
+					<li><a href="highlights.html">Highlights</a></li>
+					<li><a href="submit.html">Submit Resource</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+
+			</div>
+		</nav>
+
+		<!-- Page title -->
+		<header class="page-header">
+			<h1>Resource Directory</h1>
+			<p>
+				Search and filter through community resources in Baytown
+			</p>
+		</header>
+
+		<main>
+
+			<!-- Section for searching and filtering resources -->
+			<section class="section">
+				<div class="filter-section">
+
+					<!-- Search bar -->
+					<div class="filter-group">
+						<label for="searchInput">
+							Search Resources
+						</label>
+						<input
+							type="text"
+							id="searchInput"
+							placeholder="Enter a keyword">
+					</div>
+
+					<!-- Category dropdown -->
+					<div class="filter-group">
+						<label for="categoryFilter">
+							Category
+						</label>
+						<select id="categoryFilter">
+							<option value="">All Categories</option>
+							<option value="Healthcare">Healthcare</option>
+							<option value="Education">Education</option>
+							<option value="Food Assistance">Food Assistance</option>
+							<option value="Housing">Housing</option>
+							<option value="Mental Health">Mental Health</option>
+							<option value="Youth Services">Youth Services</option>
+							<option value="Senior Services">Senior Services</option>
+							<option value="Employment">Employment</option>
+							<option value="Legal Aid">Legal Aid</option>
+							<option value="Recreation">Recreation</option>
+							<option value="Emergency Services">Emergency Services</option>
+							<option value="Community Events">Community Events</option>
+						</select>
+					</div>
+
+					<!-- Availability dropdown -->
+					<div class="filter-group">
+						<label for="availabilityFilter">
+							Availability
+						</label>
+						<select id="availabilityFilter">
+							<option value="">All Hours</option>
+							<option value="24/7">24/7</option>
+							<option value="Business Hours">Business Hours</option>
+							<option value="Weekends">Weekends</option>
+						</select>
+					</div>
+
+					<!-- Filter button -->
+					<div class="filter-group">
+						<button onclick="applyFilters()" class="button">
+							Apply Filters
+						</button>
+					</div>
+
+					<!-- Shows how many resources are currently displayed -->
+					<p class="result-info">
+						Showing <strong id="resultCount">12</strong> resources
+					</p>
+
+				</div>
+
+				<!-- Resources will be added here using JavaScript -->
+				<div id="resourceGrid" class="resource-grid">
+					<!-- Content loads from script.js -->
+				</div>
+
+			</section>
+
+		</main>
+
+		<!-- Footer (same on all pages) -->
+		<footer class="footer">
+			<div class="footer-content">
+
+				<div>
+					<h4>Baytown Hub</h4>
+					<p>
+						Connecting the community with helpful resources.
+					</p>
+				</div>
+
+				<div>
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="resources.html">Resources</a></li>
+						<li><a href="highlights.html">Highlights</a></li>
+						<li><a href="submit.html">Submit Resource</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h4>Contact</h4>
+					<p>
+						<a href="mailto:info@baytownhub.org">info@baytownhub.org</a>
+					</p>
+				</div>
+
+			</div>
+
+			<p class="copyright">
+				&copy; 2026 Baytown Community Resource Hub
+			</p>
+		</footer>
+
+		<!-- JavaScript for filtering and displaying resources -->
+		<script src="script.js"></script>
+
+	</body>
+</html>

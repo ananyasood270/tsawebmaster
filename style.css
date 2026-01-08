@@ -1,0 +1,593 @@
+/* Custom CSS for Nassau Bay Community Hub */
+/* Created for TSA Webmaster Competition */
+/* Color scheme inspired by community and connection */
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px;
+    background-color: #f8f9fa;
+}
+
+/* ========================================
+   NAVIGATION STYLING
+   ======================================== */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+
+/* ========================================
+   HERO SECTION (Home Page)
+   ======================================== */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero .lead {
+    font-size: 1.2rem;
+}
+
+.hero .btn {
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+}
+
+.hero .btn-light {
+    background: white;
+    color: var(--primary-color);
+}
+
+.hero .btn-light:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.hero .btn-outline-light {
+    border: 2px solid white;
+}
+
+.hero .btn-outline-light:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   PAGE HEADER (Internal Pages)
+   ======================================== */
+.page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 0 60px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.page-header .lead {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* ========================================
+   STATISTICS CARDS
+   ======================================== */
+.stat-card {
+    text-align: center;
+    padding: 25px 20px;
+    background: white;
+    border-radius: 10px;
+    margin-top: -30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--primary-color);
+}
+
+.stat-card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-card p {
+    color: #6c757d;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* ========================================
+   SECTION TITLES
+   ======================================== */
+.section-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* ========================================
+   CATEGORY CARDS (Home Page)
+   ======================================== */
+.category-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.category-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.category-card h5 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   INFO CARDS
+   ======================================== */
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    height: 100%;
+}
+
+.info-card h4,
+.info-card h5 {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-card li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.info-card li:before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ========================================
+   CALL TO ACTION CARDS
+   ======================================== */
+.cta-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.cta-card h3,
+.cta-card h4 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cta-card p {
+    color: white;
+    opacity: 0.95;
+}
+
+.cta-card .btn-light {
+    background: white;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.cta-card .btn-light:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SEARCH AND FILTER SECTION
+   ======================================== */
+.filter-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+/* ========================================
+   RESOURCE CARDS
+   ======================================== */
+.resource-card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    height: 100%;
+}
+
+.resource-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+
+.resource-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.resource-card p {
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+/* ========================================
+   CATEGORY BADGES
+   Each category gets a unique color
+   ======================================== */
+.category-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.badge-healthcare { 
+    background-color: #cfe2ff; 
+    color: #084298; 
+}
+
+.badge-education { 
+    background-color: #d1e7dd; 
+    color: #0f5132; 
+}
+
+.badge-food { 
+    background-color: #fff3cd; 
+    color: #664d03; 
+}
+
+.badge-housing { 
+    background-color: #f8d7da; 
+    color: #842029; 
+}
+
+.badge-mental { 
+    background-color: #e2d9f3; 
+    color: #432874; 
+}
+
+.badge-youth { 
+    background-color: #cff4fc; 
+    color: #055160; 
+}
+
+.badge-senior { 
+    background-color: #e7e7e7; 
+    color: #495057; 
+}
+
+.badge-employment { 
+    background-color: #d3f9d8; 
+    color: #146c43; 
+}
+
+.badge-legal { 
+    background-color: #ffe5d0; 
+    color: #984c0c; 
+}
+
+.badge-recreation { 
+    background-color: #d0f0fd; 
+    color: #0a58ca; 
+}
+
+.badge-emergency { 
+    background-color: #f8d7da; 
+    color: #b02a37; 
+}
+
+.badge-events { 
+    background-color: #fff0c2; 
+    color: #997404; 
+}
+
+/* ========================================
+   FEATURED HIGHLIGHT CARDS
+   Showcases top 3 community resources
+   ======================================== */
+.highlight-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.highlight-card:hover {
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.highlight-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.highlight-card p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.highlight-card hr {
+    border-color: rgba(255,255,255,0.3);
+    margin: 15px 0;
+}
+
+/* ========================================
+   FORM SECTION
+   For submitting new resources
+   ======================================== */
+.form-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-section h5,
+.form-section h4 {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-lg {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.form-text {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+/* ========================================
+   SUCCESS MESSAGE
+   Shows when form is submitted
+   ======================================== */
+.alert-success {
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+    color: #0f5132;
+    border-radius: 8px;
+    padding: 15px;
+    display: none;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #bfdbfe;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+/* ========================================
+   NO RESULTS MESSAGE
+   ======================================== */
+.no-results {
+    text-align: center;
+    padding: 40px;
+    color: #6c757d;
+}
+
+.no-results i {
+    font-size: 3rem;
+    color: #dee2e6;
+}
+
+.no-results h4 {
+    margin-top: 15px;
+    color: #495057;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   Mobile-friendly adjustments
+   ======================================== */
+@media (max-width: 768px) {
+    .hero h1,
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero .lead,
+    .page-header .lead {
+        font-size: 1rem;
+    }
+    
+    .stat-card {
+        margin-top: -20px;
+        padding: 20px 15px;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .filter-section {
+        padding: 20px;
+    }
+    
+    .form-section {
+        padding: 20px;
+    }
+}
+
+/* ========================================
+   SMOOTH TRANSITIONS
+   Makes hover effects smooth
+   ======================================== */
+.resource-card,
+.stat-card,
+.highlight-card,
+.btn-primary,
+.category-card,
+.hero .btn {
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   ACCESSIBILITY
+   Makes site more accessible
+   ======================================== */
+*:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
