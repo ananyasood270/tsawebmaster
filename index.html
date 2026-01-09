@@ -5,18 +5,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Baytown Community Resource Hub | Home</title>
 
-		<!-- Main stylesheet for the entire site -->
+		
 		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body>
 
-		<!-- Navigation bar that stays the same on every page -->
+		<!-- navbar (same every page) -->
 		<nav class="navbar">
 			<div class="nav-container">
 
 				<a href="index.html" class="logo">
-					Baytown Hub
+					Baytown Community Hub
 				</a>
 
 				<ul class="nav-links">
@@ -25,12 +25,13 @@
 					<li><a href="highlights.html">Highlights</a></li>
 					<li><a href="submit.html">Submit Resource</a></li>
 					<li><a href="about.html">About</a></li>
+                    <li><a href="references.html">References</a></li>
 				</ul>
 
 			</div>
 		</nav>
 
-		<!-- Main welcome section users see first -->
+		<!-- welcome section -->
 		<header class="hero">
 			<h1>Welcome to Baytown Community Resource Hub</h1>
 			<p>
@@ -49,12 +50,12 @@
 
 		<main>
 
-			<!-- Quick stats to show what the site offers -->
+			<!--stats -->
 			<section class="section center">
 				<div class="three-column">
 
 					<div class="stat-card">
-						<h2>50+</h2>
+						<h2>20+</h2>
 						<p>Local Resources</p>
 					</div>
 
@@ -71,7 +72,7 @@
 				</div>
 			</section>
 
-			<!-- Intro explaining what the site is for -->
+			<!-- intro for site -->
 			<section class="section">
 				<div class="two-column">
 
@@ -92,7 +93,7 @@
 						</a>
 					</div>
 
-					<!-- Simple explanation of how the site works -->
+					
 					<div class="card">
 						<h3>How It Works</h3>
 						<ol>
@@ -105,7 +106,7 @@
 				</div>
 			</section>
 
-			<!-- Overview of resource categories -->
+			<!-- overview of resource categories -->
 			<section class="section light-bg">
 				<h2>Resource Categories</h2>
 				<p class="subtitle">
@@ -163,7 +164,7 @@
 				</div>
 			</section>
 
-			<!-- Call to action for featured resources -->
+			
 			<section class="section">
 				<div class="cta-card">
 
@@ -183,7 +184,7 @@
 
 		</main>
 
-		<!-- Footer shared across all pages -->
+		<!-- footer (all pages) -->
 		<footer class="footer">
 			<div class="footer-content">
 
@@ -202,6 +203,7 @@
 						<li><a href="highlights.html">Highlights</a></li>
 						<li><a href="submit.html">Submit Resource</a></li>
 						<li><a href="about.html">About</a></li>
+                        <li><a href="references.html">References</a></li>
 					</ul>
 				</div>
 
@@ -218,6 +220,37 @@
 				&copy; 2026 Baytown Community Resource Hub
 			</p>
 		</footer>
+<!-- Emergency Quick Access Panel -->
+    <div class="emergency-panel" id="emergencyPanel">
+        <button class="emergency-toggle" onclick="toggleEmergency()">
+            🚨 Emergency Resources
+        </button>
+        <div class="emergency-content" id="emergencyContent">
+            <h3>Need Help Now?</h3>
+            <div class="emergency-item">
+                <strong>Emergency Services:</strong> 911
+                <p>Fire, Police, Medical Emergency</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Crisis Hotline:</strong> 988
+                <p>Mental health crisis support</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Poison Control:</strong> (800) 222-1222
+                <p>24/7 poison emergency help</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Domestic Violence:</strong> (800) 799-7233
+                <p>National hotline, 24/7 support</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Suicide Prevention:</strong> 988
+                <p>Call or text, 24/7 confidential</p>
+            </div>
+            <button class="close-emergency" onclick="toggleEmergency()">Close ✕</button>
+        </div>
+    </div>
 
-	</body>
+    <script src="script.js"></script>
+</body>
 </html>

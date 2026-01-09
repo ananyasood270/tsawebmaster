@@ -5,13 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Resource Directory | Baytown Community Hub</title>
 
-		<!-- Main stylesheet -->
 		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body>
 
-		<!-- Navigation bar (same on all pages) -->
+		<!-- navigation bar (same on all pages) -->
 		<nav class="navbar">
 			<div class="nav-container">
 
@@ -25,12 +24,13 @@
 					<li><a href="highlights.html">Highlights</a></li>
 					<li><a href="submit.html">Submit Resource</a></li>
 					<li><a href="about.html">About</a></li>
+                     <li><a href="references.html">References</a></li>
 				</ul>
 
 			</div>
 		</nav>
 
-		<!-- Page title -->
+		<!-- page title -->
 		<header class="page-header">
 			<h1>Resource Directory</h1>
 			<p>
@@ -40,11 +40,11 @@
 
 		<main>
 
-			<!-- Section for searching and filtering resources -->
+			<!--search and filter resources -->
 			<section class="section">
 				<div class="filter-section">
 
-					<!-- Search bar -->
+					<!-- search bar -->
 					<div class="filter-group">
 						<label for="searchInput">
 							Search Resources
@@ -55,7 +55,8 @@
 							placeholder="Enter a keyword">
 					</div>
 
-					<!-- Category dropdown -->
+
+					<!-- category dropdown -->
 					<div class="filter-group">
 						<label for="categoryFilter">
 							Category
@@ -77,7 +78,7 @@
 						</select>
 					</div>
 
-					<!-- Availability dropdown -->
+					<!-- availability dropdown -->
 					<div class="filter-group">
 						<label for="availabilityFilter">
 							Availability
@@ -90,30 +91,29 @@
 						</select>
 					</div>
 
-					<!-- Filter button -->
+					<!-- filter button -->
 					<div class="filter-group">
 						<button onclick="applyFilters()" class="button">
 							Apply Filters
 						</button>
 					</div>
 
-					<!-- Shows how many resources are currently displayed -->
+					<!-- number currently displayed -->
 					<p class="result-info">
 						Showing <strong id="resultCount">12</strong> resources
 					</p>
 
 				</div>
 
-				<!-- Resources will be added here using JavaScript -->
+				<!-- resources added from js -->
 				<div id="resourceGrid" class="resource-grid">
-					<!-- Content loads from script.js -->
 				</div>
 
 			</section>
 
 		</main>
 
-		<!-- Footer (same on all pages) -->
+		<!-- footer (same on all pages) -->
 		<footer class="footer">
 			<div class="footer-content">
 
@@ -132,6 +132,7 @@
 						<li><a href="highlights.html">Highlights</a></li>
 						<li><a href="submit.html">Submit Resource</a></li>
 						<li><a href="about.html">About</a></li>
+                        <li><a href="references.html">References</a></li>
 					</ul>
 				</div>
 
@@ -149,8 +150,39 @@
 			</p>
 		</footer>
 
-		<!-- JavaScript for filtering and displaying resources -->
+		<!-- js for filtering and displaying resources -->
 		<script src="script.js"></script>
+<!-- emergency panel (all pages) -->
+    <div class="emergency-panel" id="emergencyPanel">
+        <button class="emergency-toggle" onclick="toggleEmergency()">
+            🚨 Emergency Resources
+        </button>
+        <div class="emergency-content" id="emergencyContent">
+            <h3>Need Help Now?</h3>
+            <div class="emergency-item">
+                <strong>Emergency Services:</strong> 911
+                <p>Fire, Police, Medical Emergency</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Crisis Hotline:</strong> 988
+                <p>Mental health crisis support</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Poison Control:</strong> (800) 222-1222
+                <p>24/7 poison emergency help</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Domestic Violence:</strong> (800) 799-7233
+                <p>National hotline, 24/7 support</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Suicide Prevention:</strong> 988
+                <p>Call or text, 24/7 confidential</p>
+            </div>
+            <button class="close-emergency" onclick="toggleEmergency()">Close ✕</button>
+        </div>
+    </div>
 
-	</body>
+   <script src="script.js"></script>
+</body>
 </html>

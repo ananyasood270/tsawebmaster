@@ -3,346 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit a Resource - Baytown Community Hub</title>
+    <title>Submit a Resource | Baytown Community Hub</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        :root {
-            --primary-color: #0d6efd;
-            --secondary-color: #6c757d;
-            --success-color: #198754;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #f8f9fa;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #f8f9fa;
-            padding: 15px 30px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav .brand {
-            font-weight: bold;
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-
-        nav ul li a.active {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 100px 20px 50px;
-        }
-
-        /* Page header */
-        .page-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .page-header h1 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        .page-header p {
-            font-size: 1rem;
-            color: var(--secondary-color);
-        }
-
-        /* Alert */
-        .alert-success {
-            background-color: #d1e7dd;
-            border: 1px solid #badbcc;
-            color: #0f5132;
-            border-radius: 8px;
-            padding: 15px;
-            display: none;
-            margin-bottom: 20px;
-        }
-
-        /* Info card */
-        .info-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-            margin-bottom: 20px;
-        }
-
-        .info-card h5 {
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        .info-card ul {
-            padding-left: 20px;
-            margin: 0;
-        }
-
-        .info-card li {
-            margin-bottom: 5px;
-        }
-
-        /* Form section */
-        .form-section {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .form-section h4, .form-section h5 {
-            color: var(--primary-color);
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        input[type="text"], input[type="email"], input[type="tel"], input[type="url"], select, textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 6px;
-            border: 1px solid #ced4da;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-        }
-
-        input:focus, select:focus, textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.2);
-        }
-
-        textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0b5ed7;
-        }
-
-        hr {
-            margin: 30px 0;
-            border: 0;
-            border-top: 1px solid #dee2e6;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        footer a {
-            color: #93c5fd;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #bfdbfe;
-            text-decoration: underline;
-        }
-
-        footer ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        footer ul li {
-            margin-bottom: 8px;
-        }
-
-    </style>
 </head>
 <body>
 
-    <!-- Navigation bar -->
-    <nav>
-        <a href="index.html" class="brand">Baytown Hub</a>
-        <ul style="float:right;">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="highlights.html">Highlights</a></li>
-            <li><a href="submit.html" class="active">Submit Resource</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+    <!-- navbar (all pages) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Baytown Hub</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="highlights.html">Highlights</a></li>
+                <li><a href="submit.html" class="active">Submit Resource</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="container">
+    <!-- page header -->
+    <header class="page-header">
+        <h1>Submit a New Resource</h1>
+        <p>Help us keep our Baytown directory accurate by suggesting local resources</p>
+    </header>
 
-        <!-- Page header -->
-        <div class="page-header">
-            <h1>Submit a New Resource</h1>
-            <p>Help us keep our Baytown directory accurate by suggesting local resources</p>
-        </div>
-
-        <!-- Success alert -->
+    <main>
+        <!-- success -->
         <div class="alert-success" id="successMessage">
             <strong>Success!</strong> Your resource submission has been received. We'll review it and add it soon.
         </div>
 
-        <!-- Info card -->
-        <div class="info-card">
-            <h5>Submission Guidelines</h5>
-            <ul>
-                <li>Please provide accurate and complete information</li>
-                <li>Include contact details so residents can reach the organization</li>
-                <li>Resources should serve Baytown or surrounding communities</li>
-                <li>All submissions are reviewed before being added to the directory</li>
-            </ul>
+        <!-- info card -->
+        <section class="section">
+            <div class="card">
+                <h3>Submission Guidelines</h3>
+                <ul>
+                    <li>Please provide accurate and complete information</li>
+                    <li>Include contact details so residents can reach the organization</li>
+                    <li>Resources should serve Baytown or surrounding communities</li>
+                    <li>All submissions are reviewed before being added to the directory</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- form -->
+        <section class="section">
+            <div class="form-card">
+                <form id="submitForm">
+                    <h2>Resource Information</h2>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="resourceName">Resource Name *</label>
+                            <input type="text" id="resourceName" required placeholder="Enter organization name">
+                        </div>
+                        <div class="form-group">
+                            <label for="resourceCategory">Category *</label>
+                            <select id="resourceCategory" required>
+                                <option value="">Select a category</option>
+                                <option value="Healthcare">Healthcare</option>
+                                <option value="Education">Education</option>
+                                <option value="Food Assistance">Food Assistance</option>
+                                <option value="Housing">Housing</option>
+                                <option value="Mental Health">Mental Health</option>
+                                <option value="Youth Services">Youth Services</option>
+                                <option value="Senior Services">Senior Services</option>
+                                <option value="Employment">Employment</option>
+                                <option value="Legal Aid">Legal Aid</option>
+                                <option value="Recreation">Recreation</option>
+                                <option value="Emergency Services">Emergency Services</option>
+                                <option value="Community Events">Community Events</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resourceDescription">Description *</label>
+                        <textarea id="resourceDescription" required placeholder="Describe the services offered"></textarea>
+                    </div>
+
+                    <h3>Contact Information</h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="resourcePhone">Phone Number</label>
+                            <input type="tel" id="resourcePhone" placeholder="(xxx) xxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="resourceEmail">Email</label>
+                            <input type="email" id="resourceEmail" placeholder="contact@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resourceAddress">Address</label>
+                        <input type="text" id="resourceAddress" placeholder="Baytown, TX">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="resourceWebsite">Website</label>
+                            <input type="url" id="resourceWebsite" placeholder="https://example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="resourceHours">Hours of Operation</label>
+                            <input type="text" id="resourceHours" placeholder="Mon-Fri 9 AM - 5 PM">
+                        </div>
+                    </div>
+
+                    <hr class="form-divider">
+
+                    <h3>Your Information</h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="submitterName">Your Name *</label>
+                            <input type="text" id="submitterName" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="submitterEmail">Your Email *</label>
+                            <input type="email" id="submitterEmail" required placeholder="your@email.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="submitterRelation">Relationship to Resource</label>
+                        <select id="submitterRelation">
+                            <option value="">Select an option</option>
+                            <option value="staff">I work for this organization</option>
+                            <option value="volunteer">I volunteer with this organization</option>
+                            <option value="client">I've used this service</option>
+                            <option value="community">Community member</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="button">Submit Resource</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer (all pages) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h4>Baytown Hub</h4>
+                <p>Connecting the community with helpful resources.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="highlights.html">Highlights</a></li>
+                    <li><a href="submit.html">Submit Resource</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p><a href="mailto:info@baytownhub.org">info@baytownhub.org</a></p>
+            </div>
         </div>
-
-        <!-- Form -->
-        <div class="form-section">
-            <form id="submitForm">
-                <h4>Resource Information</h4>
-
-                <label for="resourceName">Resource Name *</label>
-                <input type="text" id="resourceName" required>
-
-                <label for="resourceCategory">Category *</label>
-                <select id="resourceCategory" required>
-                    <option value="">Select a category</option>
-                    <option value="Healthcare">Healthcare</option>
-                    <option value="Education">Education</option>
-                    <option value="Food Assistance">Food Assistance</option>
-                    <option value="Housing">Housing</option>
-                    <option value="Mental Health">Mental Health</option>
-                    <option value="Youth Services">Youth Services</option>
-                    <option value="Senior Services">Senior Services</option>
-                    <option value="Employment">Employment</option>
-                    <option value="Legal Aid">Legal Aid</option>
-                    <option value="Recreation">Recreation</option>
-                    <option value="Emergency Services">Emergency Services</option>
-                    <option value="Community Events">Community Events</option>
-                </select>
-
-                <label for="resourceDescription">Description *</label>
-                <textarea id="resourceDescription" required></textarea>
-
-                <h5>Contact Information</h5>
-
-                <label for="resourcePhone">Phone Number</label>
-                <input type="tel" id="resourcePhone">
-
-                <label for="resourceEmail">Email</label>
-                <input type="email" id="resourceEmail">
-
-                <label for="resourceAddress">Address</label>
-                <input type="text" id="resourceAddress" placeholder="Baytown, TX">
-
-                <label for="resourceWebsite">Website</label>
-                <input type="url" id="resourceWebsite">
-
-                <label for="resourceHours">Hours of Operation</label>
-                <input type="text" id="resourceHours">
-
-                <hr>
-
-                <h5>Your Information</h5>
-
-                <label for="submitterName">Your Name *</label>
-                <input type="text" id="submitterName" required>
-
-                <label for="submitterEmail">Your Email *</label>
-                <input type="email" id="submitterEmail" required>
-
-                <label for="submitterRelation">Relationship to Resource</label>
-                <select id="submitterRelation">
-                    <option value="">Select an option</option>
-                    <option value="staff">I work for this organization</option>
-                    <option value="volunteer">I volunteer with this organization</option>
-                    <option value="client">I've used this service</option>
-                    <option value="community">Community member</option>
-                    <option value="other">Other</option>
-                </select>
-
-                <button type="submit">Submit Resource</button>
-            </form>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div>
-            <h5>Baytown Hub</h5>
-            <p>Connecting our community with essential resources and services.</p>
-
-            <h5>Quick Links</h5>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="highlights.html">Highlights</a></li>
-                <li><a href="submit.html">Submit Resource</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-
-            <h5>Contact Us</h5>
-            <p>Email: <a href="mailto:info@baytownhub.org">info@baytownhub.org</a></p>
-            <p>Help keep our directory current by submitting updates!</p>
-        </div>
-        <p>&copy; 2026 Baytown Community Resource Hub | Connecting Our Community</p>
+        <p class="copyright">&copy; 2026 Baytown Community Resource Hub</p>
     </footer>
 
-    <script>
-        const form = document.getElementById("submitForm");
-        const success = document.getElementById("successMessage");
+    
+    <!-- emergency panel (all) -->
+    <div class="emergency-panel" id="emergencyPanel">
+        <button class="emergency-toggle" onclick="toggleEmergency()">
+            🚨 Emergency Resources
+        </button>
+        <div class="emergency-content" id="emergencyContent">
+            <h3>Need Help Now?</h3>
+            <div class="emergency-item">
+                <strong>Emergency Services:</strong> 911
+                <p>Fire, Police, Medical Emergency</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Crisis Hotline:</strong> 988
+                <p>Mental health crisis support</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Poison Control:</strong> (800) 222-1222
+                <p>24/7 poison emergency help</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Domestic Violence:</strong> (800) 799-7233
+                <p>National hotline, 24/7 support</p>
+            </div>
+            <div class="emergency-item">
+                <strong>Suicide Prevention:</strong> 988
+                <p>Call or text, 24/7 confidential</p>
+            </div>
+            <button class="close-emergency" onclick="toggleEmergency()">Close ✕</button>
+        </div>
+    </div>
 
-        form.addEventListener("submit", function(e) {
-            e.preventDefault();
-            success.style.display = "block";
-            form.reset();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
