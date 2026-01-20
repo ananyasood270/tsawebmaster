@@ -1,4 +1,4 @@
-//resource list
+// List of all community resources
 const resources = [
     {
         name: "Baytown Area Food Bank",
@@ -110,14 +110,11 @@ const resources = [
     }
 ];
 
-// keep track of which resources are currently being shown
-// this changes when people use the search or filters
+// Track filtered resources
 let filteredResources = [...resources];
 
-// figure out which colored badge to use for each category
-// each category has its own color to make them easier to tell apart
+// Get the correct badge class for each category
 function getBadgeClass(category) {
-    // match the category name to a CSS class
     if (category === "Healthcare") return "badge-healthcare";
     if (category === "Education") return "badge-education";
     if (category === "Food Assistance") return "badge-food";
@@ -131,16 +128,14 @@ function getBadgeClass(category) {
     if (category === "Emergency Services") return "badge-emergency";
     if (category === "Community Events") return "badge-events";
     
-    // Default color if something doesn't match
     return "badge-secondary";
 }
 
-// show the resources on the page
-// takes a list of resources and turns them into cards
+// Display resources on the page
 function displayResources(resourcesToShow) {
     const grid = document.getElementById("resourceGrid");
     
-    // if there are no results then show a message instead
+    // Show message if no results
     if (resourcesToShow.length === 0) {
         grid.innerHTML = `
             <div class="no-results">
@@ -151,7 +146,7 @@ function displayResources(resourcesToShow) {
         return;
     }
 
-    
+    // Build HTML for each resource card
     let htmlContent = "";
     for (let i = 0; i < resourcesToShow.length; i++) {
         const resource = resourcesToShow[i];
@@ -172,101 +167,95 @@ function displayResources(resourcesToShow) {
     
     grid.innerHTML = htmlContent;
 
-    // update count
+    // Update the result count
     const countElement = document.getElementById("resultCount");
     if (countElement) {
         countElement.textContent = resourcesToShow.length;
     }
 }
 
-// run the search and filter
+// Apply search and filter criteria
 function applyFilters() {
-    // get what the user typed or selected
     const searchText = document.getElementById("searchInput").value.toLowerCase();
     const selectedCategory = document.getElementById("categoryFilter").value;
     const selectedAvailability = document.getElementById("availabilityFilter").value;
 
-    // go through all resources and see which ones match
+    // Filter resources based on criteria
     filteredResources = [];
     for (let i = 0; i < resources.length; i++) {
         const resource = resources[i];
         
-        // check if the search text appears in the name or description
+        // Check if search text matches name or description
         const matchesSearch = 
             resource.name.toLowerCase().includes(searchText) ||
             resource.description.toLowerCase().includes(searchText);
         
-        // check if the category matches
+        // Check if category matches
         const matchesCategory = 
             selectedCategory === "" || resource.category === selectedCategory;
         
-        // check if the availability matches
+        // Check if availability matches
         const matchesAvailability = 
             selectedAvailability === "" || resource.availability === selectedAvailability;
 
-        // if all filters match, then add this resource to the results
+        // Add to results if all filters match
         if (matchesSearch && matchesCategory && matchesAvailability) {
             filteredResources.push(resource);
         }
     }
 
-    // show the filtered results on the page
     displayResources(filteredResources);
 }
 
-// update results as the user types in the search box
+// Set up event listeners for live filtering
 const searchBox = document.getElementById("searchInput");
 if (searchBox) {
     searchBox.addEventListener("input", applyFilters);
 }
 
-// update results when category filter changes
 const categoryDropdown = document.getElementById("categoryFilter");
 if (categoryDropdown) {
     categoryDropdown.addEventListener("change", applyFilters);
 }
 
-// update results when availability filter changes
 const availabilityDropdown = document.getElementById("availabilityFilter");
 if (availabilityDropdown) {
     availabilityDropdown.addEventListener("change", applyFilters);
 }
 
-// handle the form submission on the submit page
+// Handle form submission
 const submitForm = document.getElementById("submitForm");
 if (submitForm) {
     submitForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // stop reloads
+        event.preventDefault();
         
-        // show success message
+        // Show success message
         const successMessage = document.getElementById("successMessage");
         successMessage.style.display = "block";
         
-        // clear all the form fields
+        // Clear form
         submitForm.reset();
         
-        // scroll to the success message so the user can see it
+        // Scroll to success message
         successMessage.scrollIntoView({ behavior: "smooth" });
         
-        // hide message after 5 seconds
+        // Hide message after 5 seconds
         setTimeout(function() {
             successMessage.style.display = "none";
         }, 5000);
     });
 }
 
-// when page first loads, show all the resources
+// Display all resources when page loads
 displayResources(resources);
-// ==========================================
-// EMERGENCY PANEL FUNCTIONALITY
-// ==========================================
 
+// Emergency panel toggle
 function toggleEmergency() {
     const content = document.getElementById('emergencyContent');
     content.classList.toggle('show');
 }
 
-// close emergency panel when clicking outside
+// Close emergency panel when clicking outside
 document.addEventListener('click', function(event) {
     const panel = document.getElementById('emergencyPanel');
     const content = document.getElementById('emergencyContent');
@@ -277,4 +266,3 @@ document.addEventListener('click', function(event) {
         }
     }
 });
-

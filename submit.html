@@ -8,10 +8,10 @@
 </head>
 <body>
 
-    <!-- navbar (all pages) -->
+    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">Baytown Hub</a>
+            <a href="index.html" class="logo">Baytown Community Hub</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="resources.html">Resources</a></li>
@@ -23,19 +23,19 @@
         </div>
     </nav>
 
-    <!-- page header -->
+    <!-- Page header -->
     <header class="page-header">
         <h1>Submit a New Resource</h1>
         <p>Help us keep our Baytown directory accurate by suggesting local resources</p>
     </header>
 
     <main>
-        <!-- success -->
+        <!-- Success message (hidden by default) -->
         <div class="alert-success" id="successMessage">
             <strong>Success!</strong> Your resource submission has been received. We'll review it and add it soon.
         </div>
 
-        <!-- info card -->
+        <!-- Submission guidelines -->
         <section class="section">
             <div class="card">
                 <h3>Submission Guidelines</h3>
@@ -48,7 +48,7 @@
             </div>
         </section>
 
-        <!-- form -->
+        <!-- Submission form -->
         <section class="section">
             <div class="form-card">
                 <form id="submitForm">
@@ -146,7 +146,7 @@
         </section>
     </main>
 
-    <!-- footer (all pages) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div>
@@ -172,34 +172,40 @@
         <p class="copyright">&copy; 2026 Baytown Community Resource Hub</p>
     </footer>
 
-    
-    <!-- emergency panel (all) -->
+    <!-- Emergency panel -->
     <div class="emergency-panel" id="emergencyPanel">
         <button class="emergency-toggle" onclick="toggleEmergency()">
             🚨 Emergency Resources
         </button>
+        
         <div class="emergency-content" id="emergencyContent">
             <h3>Need Help Now?</h3>
+            
             <div class="emergency-item">
                 <strong>Emergency Services:</strong> 911
                 <p>Fire, Police, Medical Emergency</p>
             </div>
+            
             <div class="emergency-item">
                 <strong>Crisis Hotline:</strong> 988
                 <p>Mental health crisis support</p>
             </div>
+            
             <div class="emergency-item">
                 <strong>Poison Control:</strong> (800) 222-1222
                 <p>24/7 poison emergency help</p>
             </div>
+            
             <div class="emergency-item">
                 <strong>Domestic Violence:</strong> (800) 799-7233
                 <p>National hotline, 24/7 support</p>
             </div>
+            
             <div class="emergency-item">
                 <strong>Suicide Prevention:</strong> 988
                 <p>Call or text, 24/7 confidential</p>
             </div>
+            
             <button class="close-emergency" onclick="toggleEmergency()">Close ✕</button>
         </div>
     </div>
