@@ -167,12 +167,13 @@ function displayResources(resourcesToShow) {
     
     grid.innerHTML = htmlContent;
 
-    // Update the result count
+    // Update the result
     const countElement = document.getElementById("resultCount");
     if (countElement) {
         countElement.textContent = resourcesToShow.length;
     }
 }
+
 
 // Apply search and filter criteria
 function applyFilters() {
@@ -180,12 +181,12 @@ function applyFilters() {
     const selectedCategory = document.getElementById("categoryFilter").value;
     const selectedAvailability = document.getElementById("availabilityFilter").value;
 
-    // Filter resources based on criteria
+    // Filter
     filteredResources = [];
     for (let i = 0; i < resources.length; i++) {
         const resource = resources[i];
         
-        // Check if search text matches name or description
+        // Check search text
         const matchesSearch = 
             resource.name.toLowerCase().includes(searchText) ||
             resource.description.toLowerCase().includes(searchText);
@@ -204,10 +205,11 @@ function applyFilters() {
         }
     }
 
+
     displayResources(filteredResources);
 }
 
-// Set up event listeners for live filtering
+// Live filtering event listeners
 const searchBox = document.getElementById("searchInput");
 if (searchBox) {
     searchBox.addEventListener("input", applyFilters);
@@ -222,6 +224,7 @@ const availabilityDropdown = document.getElementById("availabilityFilter");
 if (availabilityDropdown) {
     availabilityDropdown.addEventListener("change", applyFilters);
 }
+
 
 // Handle form submission
 const submitForm = document.getElementById("submitForm");
@@ -245,6 +248,7 @@ if (submitForm) {
         }, 5000);
     });
 }
+
 
 // Display all resources when page loads
 displayResources(resources);

@@ -1,13 +1,3 @@
-/* 
-   Baytown Community Hub Stylesheet
-   Created by: [Your Team Names]
-   TSA Webmaster 2025-2026
-   
-   We wanted a modern, accessible design with purple and blue colors.
-   Tested all colors for WCAG contrast standards.
-*/
-
-/* Reset - removes default browser styling */
 * {
     margin: 0;
     padding: 0;
@@ -27,14 +17,13 @@ main {
     padding: 20px;
 }
 
-/* Navigation - sticky header that stays at top when scrolling */
+/* Nav header */
 .navbar {
     background: linear-gradient(to right, #7c3aed, #2563eb);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 3px solid #5b21b6;
 }
 
 .nav-container {
@@ -80,13 +69,12 @@ main {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Hero section - big header on homepage */
+/* Header on homepage */
 .hero {
     background: linear-gradient(to bottom right, #7c3aed, #0ea5e9);
     color: white;
     text-align: center;
     padding: 70px 30px;
-    border-radius: 15px;
     margin-bottom: 40px;
     box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
 }
@@ -112,7 +100,7 @@ main {
     flex-wrap: wrap;
 }
 
-/* Page headers for other pages */
+/* Page header for other pages */
 .page-header {
     background: linear-gradient(to right, #7c3aed, #0ea5e9);
     color: white;
@@ -136,7 +124,7 @@ main {
     color: white;
 }
 
-/* Button styles */
+/* Button styling */
 .button {
     display: inline-block;
     padding: 13px 26px;
@@ -177,6 +165,7 @@ main {
     color: #7c3aed;
 }
 
+
 /* Sections */
 .section {
     margin-bottom: 50px;
@@ -204,20 +193,20 @@ main {
     line-height: 1.7;
 }
 
-/* Light purple background sections */
+
+/* Purple background sections */
 .light-bg {
     background: linear-gradient(to bottom, #ffffff, #f3e8ff);
     padding: 45px 35px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(124, 58, 237, 0.1);
-    border: 2px solid #e9d5ff;
 }
 
 .center {
     text-align: center;
 }
 
-/* Grid layouts - learned CSS Grid from MDN Web Docs */
+/* Grid layouts */
 .two-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -242,14 +231,12 @@ main {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #c4b5fd;
     transition: all 0.3s;
 }
 
 .card:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-4px);
-    border-left-color: #7c3aed;
 }
 
 .card h3 {
@@ -283,7 +270,7 @@ main {
     color: #4a5568;
 }
 
-/* Checkmark bullets - found this technique on CSS-Tricks */
+/* Checkmark bullets */
 .card li::before {
     content: "✓";
     position: absolute;
@@ -292,6 +279,7 @@ main {
     font-weight: bold;
     font-size: 18px;
 }
+
 
 .card ol {
     padding-left: 20px;
@@ -311,7 +299,7 @@ main {
     color: #1a202c;
 }
 
-/* Statistics cards on home page */
+/* Stats card on first page*/
 .stat-card {
     background: white;
     padding: 35px 20px;
@@ -319,22 +307,6 @@ main {
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
-    border-top: 5px solid transparent;
-}
-
-.stat-card:nth-child(1) {
-    border-top-color: #2563eb;
-    background: linear-gradient(to bottom, white, #dbeafe);
-}
-
-.stat-card:nth-child(2) {
-    border-top-color: #7c3aed;
-    background: linear-gradient(to bottom, white, #f3e8ff);
-}
-
-.stat-card:nth-child(3) {
-    border-top-color: #0ea5e9;
-    background: linear-gradient(to bottom, white, #e0f2fe);
 }
 
 .stat-card:hover {
@@ -363,48 +335,6 @@ main {
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
-    border-top: 4px solid transparent;
-}
-
-/* Using your color palette for categories */
-.category-card:nth-child(1) { 
-    background: linear-gradient(to bottom, white, #dbeafe);
-    border-top-color: #2563eb;
-}
-
-.category-card:nth-child(2) { 
-    background: linear-gradient(to bottom, white, #d1fae5);
-    border-top-color: #10b981;
-}
-
-.category-card:nth-child(3) { 
-    background: linear-gradient(to bottom, white, #fed7aa);
-    border-top-color: #f97316;
-}
-
-.category-card:nth-child(4) { 
-    background: linear-gradient(to bottom, white, #fce7f3);
-    border-top-color: #ec4899;
-}
-
-.category-card:nth-child(5) { 
-    background: linear-gradient(to bottom, white, #f3e8ff);
-    border-top-color: #7c3aed;
-}
-
-.category-card:nth-child(6) { 
-    background: linear-gradient(to bottom, white, #ccfbf1);
-    border-top-color: #14b8a6;
-}
-
-.category-card:nth-child(7) { 
-    background: linear-gradient(to bottom, white, #fef08a);
-    border-top-color: #eab308;
-}
-
-.category-card:nth-child(8) { 
-    background: linear-gradient(to bottom, white, #e0f2fe);
-    border-top-color: #0ea5e9;
 }
 
 .category-card:hover {
@@ -460,7 +390,6 @@ main {
     grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
     gap: 15px;
     align-items: end;
-    border: 2px solid #e9d5ff;
 }
 
 .filter-group {
@@ -511,7 +440,7 @@ main {
     gap: 24px;
 }
 
-/* Category badges for each resource type */
+/* Category badges for each resource */
 .category-badge {
     display: inline-block;
     padding: 7px 15px;
@@ -587,7 +516,7 @@ main {
     padding: 60px 30px;
     background: white;
     border-radius: 12px;
-    border: 2px dashed #c4b5fd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .no-results p {
@@ -595,6 +524,7 @@ main {
     color: #4a5568;
     margin-bottom: 8px;
 }
+
 
 /* Footer */
 .footer {
@@ -642,12 +572,7 @@ main {
     color: #dbeafe;
 }
 
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #374151;
-    color: #9ca3af;
-}
+
 
 /* Form styles */
 .form-card {
@@ -655,7 +580,6 @@ main {
     padding: 38px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
-    border: 2px solid #e9d5ff;
 }
 
 .form-card h2 {
@@ -768,7 +692,6 @@ main {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     display: none;
     max-width: 320px;
-    border: 3px solid #dc2626;
 }
 
 .emergency-content.show {
@@ -787,7 +710,6 @@ main {
     padding: 12px;
     margin: 12px 0;
     background: #fef2f2;
-    border-left: 4px solid #dc2626;
     border-radius: 8px;
     transition: all 0.3s;
 }
